@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="24dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sobre Nosotros"
+            android:textAppearance="?attr/textAppearanceHeadline5"
+            android:textStyle="bold"/>
+
+        <!-- Quiénes somos -->
+        <TextView style="@style/TextSubtitulo" android:text="¿Quiénes somos?"/>
+        <TextView style="@style/TextParrafo"
+            android:text="Somos un equipo de profesionales comprometidos con mejorar el acceso..."/>
+
+        <TextView
+            android:id="@+id/tvGoProfesionales"
+            style="@style/TextParrafoLink"
+            android:text="Conoce a nuestros Profesionales"/>
+
+        <!-- Qué ofrecemos -->
+        <TextView style="@style/TextSubtitulo" android:text="¿Qué ofrecemos?"/>
+        <TextView style="@style/TextParrafo"
+            android:text="• Solicitud de turnos online\n• Acceso a especialidades médicas\n• Visualización de turnos confirmados, pasados o pendientes\n• Cancelación o modificación de turnos"/>
+
+        <!-- Cómo funciona -->
+        <TextView style="@style/TextSubtitulo" android:text="¿Cómo funciona esta página?"/>
+        <TextView style="@style/TextParrafo"
+            android:text="1. Regístrate e inicia sesión\n2. Gestiona tu grupo familiar\n3. Elige fecha, horario y tipo de turno\n4. Solicita tu turno\n5. Consulta tus turnos"/>
+
+        <!-- Misión -->
+        <TextView style="@style/TextSubtitulo" android:text="Nuestra Misión"/>
+        <TextView style="@style/TextParrafo"
+            android:text="Facilitar el vínculo entre los pacientes y los centros médicos..."/>
+
+        <!-- Contacto -->
+        <TextView style="@style/TextSubtitulo" android:text="Contacto"/>
+        <TextView style="@style/TextParrafoLink"
+            android:text="contacto@centrosalud.com"/>
+
+    </LinearLayout>
+</ScrollView>

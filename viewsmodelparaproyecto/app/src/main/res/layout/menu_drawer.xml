@@ -1,0 +1,10 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/nav_inicio" android:title="Inicio" android:icon="@drawable/ic_home"/>
+    <item android:id="@+id/nav_login" android:title="Ingresar" android:icon="@drawable/ic_login"/>
+    <item android:id="@+id/nav_register" android:title="Registro" android:icon="@drawable/ic_register"/>
+    <!-- grupo visible solo cuando el usuario haya iniciado sesión -->
+    <group android:id="@+id/group_logged_in" android:visible="false">
+        <item android:id="@+id/nav_seleccionar_paciente" android:title="Seleccionar Paciente" android:icon="@drawable/ic_patient"/>
+        <item android:id="@+id/nav_logout" android:title="Cerrar sesión" android:icon="@drawable/ic_logout"/>
+    </group>
+</menu>

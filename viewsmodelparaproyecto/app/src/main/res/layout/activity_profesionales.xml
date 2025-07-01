@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="24dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nuestros Profesionales"
+            android:textAppearance="?attr/textAppearanceHeadline5"
+            android:textStyle="bold"/>
+
+        <!-- Sección Clínica General -->
+        <com.google.android.material.card.MaterialCardView
+            style="@style/TarjetaProf"
+            app:cardElevation="4dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView style="@style/TextSubtitulo"
+                    android:text="🩺 Clínica General — Dra. María Gómez"/>
+
+                <TextView style="@style/TextSubSeccion" android:text="📋 Consulta clínica"/>
+                <TextView style="@style/TextParrafo"
+                    android:text="Atiende salud general en adultos. Chequeos anuales, estudios preventivos, derivación a especialistas." />
+
+                <TextView style="@style/TextSubSeccion" android:text="🧪 Análisis de Laboratorio"/>
+                <TextView style="@style/TextParrafo"
+                    android:text="Extracción y análisis de muestras. Apoyo diagnóstico." />
+
+                <TextView style="@style/TextSubSeccion" android:text="💉 Vacunación"/>
+                <TextView style="@style/TextParrafo"
+                    android:text="Aplica vacunas del calendario oficial y campañas especiales." />
+
+                <TextView style="@style/TextParrafoBold"
+                    android:text="Horario: Lunes 8-12 hs y Miércoles 14-18 hs"/>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Ginecología, Cardiología, Pediatría ... repetir estructura -->
+        <!-- Para abreviar, duplica la tarjeta anterior y cambia textos/emoji/horarios -->
+
+    </LinearLayout>
+</ScrollView>

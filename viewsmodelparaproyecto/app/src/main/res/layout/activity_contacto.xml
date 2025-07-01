@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="24dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Información de Contacto"
+            android:textAppearance="?attr/textAppearanceHeadline5"
+            android:textStyle="bold" />
+
+        <!-- Dirección -->
+        <TextView
+            style="@style/TextSubtitulo"
+            android:text="📍 Dirección"/>
+        <TextView
+            style="@style/TextParrafo"
+            android:text="España 831, W3450 BWQ, Goya Corrientes"/>
+
+        <!-- Teléfono -->
+        <TextView style="@style/TextSubtitulo" android:text="📞 Teléfono"/>
+        <TextView style="@style/TextParrafo" android:text="(000) 123-4567"/>
+
+        <!-- Correo -->
+        <TextView style="@style/TextSubtitulo" android:text="✉️ Correo Electrónico"/>
+        <TextView
+            android:id="@+id/tvEmail"
+            style="@style/TextParrafoLink"
+            android:text="contacto@centrosalud.com"/>
+
+        <!-- Horarios -->
+        <TextView style="@style/TextSubtitulo" android:text="🕘 Horarios de Atención"/>
+        <TextView style="@style/TextParrafo"
+            android:text="Lunes a Domingo: 08:00 a 20:00 hs"/>
+
+        <!-- Mapa -->
+        <TextView style="@style/TextSubtitulo" android:text="📍 Ubicación en el mapa"/>
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="220dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/rounded_bg">
+
+            <WebView
+                android:id="@+id/webMap"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+        </FrameLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnOpenMaps"
+            style="@style/Widget.Material3.Button.OutlinedButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Abrir en Google Maps"/>
+
+    </LinearLayout>
+</ScrollView>
