@@ -1,4 +1,6 @@
 package com.empresaficticia.SaludTotal.register.model
 
-class RegisterResponse {
-}
+data class RegisterResponse(
+    val success: Boolean,
+    val email: String
+)

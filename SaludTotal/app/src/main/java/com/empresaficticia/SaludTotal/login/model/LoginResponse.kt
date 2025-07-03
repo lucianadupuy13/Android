@@ -1,6 +1,6 @@
 package com.empresaficticia.SaludTotal.login.model
 
 data class LoginResponse(
-    val Token: String,
+    val token: String,
     val email: String
 )

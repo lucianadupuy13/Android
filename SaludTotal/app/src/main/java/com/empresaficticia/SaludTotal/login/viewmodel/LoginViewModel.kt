@@ -2,33 +2,42 @@ package com.empresaficticia.SaludTotal.login.viewmodel
 
 import android.app.Application
 import android.content.Context
-import android.util.Log
 import androidx.lifecycle.*
 import com.empresaficticia.SaludTotal.login.model.LoginRequest
 import com.empresaficticia.SaludTotal.login.model.LoginResponse
-import com.empresaficticia.SaludTotal.retrofitClient.RestClient
+import com.empresaficticia.SaludTotal.retrofitClient.RetrofitClient
 import kotlinx.coroutines.launch
+import retrofit2.Response
+
 
 class LoginViewModel(application: Application) : AndroidViewModel(application) {
 
     val loginResult = MutableLiveData<LoginResponse?>()
-    val error = MutableLiveData<String?>()
+    val errorMessage = MutableLiveData<String?>()
 
-    fun hacerLogin(email: String, password: String) {
+    fun login(email: String, password: String) {
         viewModelScope.launch {
             try {
-                val response = RestClient.instance.login(LoginRequest(email, password))
-                guardarToken(response.Token)
-                loginResult.postValue(response)
+                val response: Response<LoginResponse> =
+                    RetrofitClient.instance.login(LoginRequest(email, password))
+
+                if (response.isSuccessful) {
+                    val loginResponse = response.body()
+                    loginResponse?.let {
+                        loginResult.value = it
+
+                        getApplication<Application>()
+                            .getSharedPreferences("APP_PREFS", Context.MODE_PRIVATE)
+                            .edit()
+                            .putString("JWT_TOKEN", it.token)
+                            .apply()
+                    }
+                } else {
+                    errorMessage.value = "Credenciales incorrectas"
+                }
             } catch (e: Exception) {
-                Log.e("LoginViewModel", "Error: ${e.message}", e)
-                error.postValue("Credenciales inválidas o error de conexión")
+                errorMessage.value = "Error de red: ${e.message}"
             }
         }
-    }
-
-    private fun guardarToken(token: String) {
-        val prefs = getApplication<Application>().getSharedPreferences("app_prefs", Context.MODE_PRIVATE)
-        prefs.edit().putString("jwt_token", token).apply()
     }
 }

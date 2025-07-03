@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- TopBar común -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/primary_blue"
+        android:orientation="horizontal"
+        android:padding="8dp">
+
+        <Button
+            android:id="@+id/btnInicio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Inicio"
+            android:textColor="@android:color/white"
+            android:background="@android:color/transparent"/>
+
+        <Button
+            android:id="@+id/btnLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Login"
+            android:textColor="@android:color/white"
+            android:background="@android:color/transparent"/>
+
+        <Button
+            android:id="@+id/btnRegistro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Registro"
+            android:textColor="@android:color/white"
+            android:background="@android:color/transparent"/>
+    </LinearLayout>
+
+    <!-- Contenedor de contenido dinámico -->
+    <FrameLayout
+        android:id="@+id/frameContenido"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</LinearLayout>

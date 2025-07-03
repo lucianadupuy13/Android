@@ -1,15 +1,20 @@
 package com.empresaficticia.SaludTotal.retrofitClient
-import com.empresaficticia.SaludTotal.login.model.LoginRequest
-import com.empresaficticia.SaludTotal.login.model.LoginResponse
-import retrofit2.http.Body
-import retrofit2.http.GET
-import retrofit2.http.POST
-import retrofit2.http.Path
+
+import com.empresaficticia.SaludTotal.paciente.model.*
+import retrofit2.Response
+import retrofit2.http.*
 
 interface SaludTotalApi {
-//    @GET("cursos")
-//    suspend fun obtenerCursos(): List<Curso>
 
-    @POST("login")
-    suspend fun login(@Body request: LoginRequest): LoginResponse
+    @GET("api/pacienteapi/pacientes")
+    suspend fun getPacientes(): Response<List<PacienteDto>>
+
+    @POST("api/pacienteapi/seleccionar")
+    suspend fun seleccionarPaciente(@Body pacienteId: String): Response<PacienteResponse>
+
+    @GET("api/pacienteapi/crear")
+    suspend fun verificarCrearPaciente(): Response<Map<String, String>>
+
+    @POST("api/pacienteapi/crear")
+    suspend fun crearPaciente(@Body paciente: PacienteRequest): Response<PacienteResponse>
 }
