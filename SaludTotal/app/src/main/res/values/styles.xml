@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- About screen styles -->
+    <style name="About.Subtitle" parent="TextAppearance.Material3.TitleMedium">
+        <item name="android:textColor">@color/primaryDark</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_marginTop">16dp</item>
+    </style>
+
+    <style name="About.Paragraph" parent="TextAppearance.Material3.BodyMedium">
+        <item name="android:textColor">@color/gray800</item>
+        <item name="android:lineSpacingMultiplier">1.2</item>
+        <item name="android:layout_marginTop">8dp</item>
+    </style>
+
+    <style name="About.LinkButton" parent="Widget.Material3.Button.TextButton">
+        <item name="android:textColor">@color/secondary</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:paddingStart">0dp</item>
+        <item name="android:paddingEnd">0dp</item>
+        <item name="android:drawablePadding">4dp</item>
+    </style>
+
+    <style name="About.LinkText" parent="About.Paragraph">
+        <item name="android:textColor">@color/secondary</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="About.BulletPoint" parent="About.Paragraph">
+        <item name="android:drawableStart">@drawable/ic_bullet_point</item>
+        <item name="android:drawablePadding">8dp</item>
+        <item name="android:paddingStart">4dp</item>
+    </style>
+
+    <style name="About.NumberedPoint" parent="About.Paragraph">
+        <item name="android:drawableStart">@drawable/ic_numbered_point</item>
+        <item name="android:drawablePadding">8dp</item>
+        <item name="android:paddingStart">4dp</item>
+    </style>
+
+    <!-- Tarjetas del home -->
+    <style name="CardInfo">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginBottom">16dp</item>
+    </style>
+
+    <style name="ContentCard">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:padding">16dp</item>
+    </style>
+
+    <style name="TitleCard">
+        <item name="android:textColor">@color/primary_blue</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_marginBottom">8dp</item>
+    </style>
+
+    <style name="BodyCard">
+        <item name="android:textColor">@color/text_dark</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+
+</resources>

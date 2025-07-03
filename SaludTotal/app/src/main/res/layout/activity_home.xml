@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F2F9FF">
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:padding="16dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal">
+
+            <!-- Título principal -->
+            <TextView
+                android:id="@+id/tvTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sobre Nosotros"
+                android:textSize="24sp"
+                android:textColor="#007bff"
+                android:textStyle="bold"
+                android:layout_marginBottom="24dp" />
+
+            <!-- ¿Quiénes somos? -->
+            <com.google.android.material.card.MaterialCardView
+                style="@style/CardInfo"
+                app:cardElevation="4dp"
+                app:cardCornerRadius="12dp"
+                app:strokeColor="#E0E0E0"
+                app:strokeWidth="1dp"
+                android:backgroundTint="@android:color/white">
+
+                <LinearLayout style="@style/ContentCard">
+
+                    <TextView
+                        style="@style/TitleCard"
+                        android:text="¿Quiénes somos?"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        style="@style/BodyCard"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Somos un equipo de profesionales comprometidos con mejorar el acceso a la atención médica. Nuestro objetivo es ofrecer un servicio rápido, organizado y eficiente para que puedas gestionar tus turnos médicos desde la comodidad de tu casa." />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- ¿Qué ofrecemos? -->
+            <com.google.android.material.card.MaterialCardView
+                style="@style/CardInfo"
+                app:cardElevation="4dp"
+                app:cardCornerRadius="12dp"
+                app:strokeColor="#E0E0E0"
+                app:strokeWidth="1dp"
+                android:backgroundTint="@android:color/white">
+
+                <LinearLayout style="@style/ContentCard">
+
+                    <TextView
+                        style="@style/TitleCard"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="¿Qué ofrecemos?" />
+
+                    <TextView
+                        style="@style/BodyCard"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="• 📅 Solicitud de turnos online de forma simple y rápida.\n• 🔍 Acceso a especialidades médicas como cardiología, pediatría, neurología y más.\n• 📄 Visualización de turnos confirmados, pasados o pendientes.\n• ⏳ Cancelación o modificación de turnos de forma directa." />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- ¿Cómo funciona esta página? -->
+            <com.google.android.material.card.MaterialCardView
+                style="@style/CardInfo"
+                app:cardElevation="4dp"
+                app:cardCornerRadius="12dp"
+                app:strokeColor="#E0E0E0"
+                app:strokeWidth="1dp"
+                android:backgroundTint="@android:color/white">
+
+                <LinearLayout style="@style/ContentCard">
+
+                    <TextView
+                        style="@style/TitleCard"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="¿Cómo funciona esta página?" />
+
+                    <TextView
+                        style="@style/BodyCard"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="1. 📲 Regístrate e inicia sesión: crea tu perfil en segundos.\n\n2. 👨‍👩‍👧‍👦 Gestioná tu grupo familiar.\n\n3. 📅⏰ Elegí fecha, horario y tipo de turno.\n\n4. ✅ Solicitá tu turno con un solo clic.\n\n5. 🔍 Consultá tus turnos en cualquier momento." />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Nuestra Misión -->
+            <com.google.android.material.card.MaterialCardView
+                style="@style/CardInfo"
+                app:cardElevation="4dp"
+                app:cardCornerRadius="12dp"
+                app:strokeColor="#E0E0E0"
+                app:strokeWidth="1dp"
+                android:backgroundTint="@android:color/white">
+
+                <LinearLayout style="@style/ContentCard">
+
+                    <TextView
+                        style="@style/TitleCard"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Nuestra Misión" />
+
+                    <TextView
+                        style="@style/BodyCard"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Buscamos facilitar el vínculo entre los pacientes y los centros médicos, ahorrando tiempo y reduciendo demoras en la atención." />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Contacto -->
+            <com.google.android.material.card.MaterialCardView
+                style="@style/CardInfo"
+                app:cardElevation="4dp"
+                app:cardCornerRadius="12dp"
+                app:strokeColor="#E0E0E0"
+                app:strokeWidth="1dp"
+                android:backgroundTint="@android:color/white">
+
+                <LinearLayout style="@style/ContentCard">
+
+                    <TextView
+                        style="@style/TitleCard"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Contacto" />
+
+                    <TextView
+                        style="@style/BodyCard"
+                        android:autoLink="email"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Ante cualquier duda, podés escribirnos a: contacto@centrosalud.com" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
